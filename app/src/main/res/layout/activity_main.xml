@@ -14,9 +14,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="146dp"
-        android:layout_marginLeft="146dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="32dp"
         app:srcCompat="@drawable/logo_sin_fondo" />
 
     <Button
@@ -30,6 +30,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="64dp"
         android:background="@color/Violeta4"
+        android:onClick="logIn"
         android:text="@string/log_in"
         android:textColor="@color/Violeta1"
         android:textSize="24sp" />

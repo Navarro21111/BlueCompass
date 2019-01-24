@@ -3,7 +3,7 @@ package com.example.a21736256.bluecompass;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LogIn_activity extends AppCompatActivity {
+public class LogIn extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
