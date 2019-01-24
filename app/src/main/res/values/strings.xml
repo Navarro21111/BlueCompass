@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BlueCompass</string>
+    <string name="btnLogIn">btn_log_in</string>
+    <string name="log_in">Log in</string>
+    <string name="Registrate">btn_registro</string>
+    <string name="btn_registro">Registrate</string>
 </resources>
