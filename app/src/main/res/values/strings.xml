@@ -4,4 +4,7 @@
     <string name="log_in">Log in</string>
     <string name="Registrate">btn_registro</string>
     <string name="btn_registro">Registrate</string>
+    <string name="et_usuario">Introduce tu usuario</string>
+    <string name="et_contraseña">Introduce tu contraseña</string>
+    <string name="btn_inciar_sesion">Iniciar Sesion</string>
 </resources>
