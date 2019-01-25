@@ -67,7 +67,7 @@
         android:textSize="18sp"
         android:layout_marginRight="-316dp"
         android:layout_toLeftOf="@+id/etHora"
-        tools:ignore="RtlCompat" />
+        />
 
     <EditText
         android:id="@+id/etNombreGrupo"
@@ -77,9 +77,9 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="-107dp"
         android:ems="10"
-        android:hint="@string/txtNombreGrupo"
+        android:hint="@string/txtNombreEvento"
         android:inputType="textPersonName"
         android:layout_alignParentLeft="true"
-        tools:ignore="RtlCompat" />
+         />
 
 </RelativeLayout>
