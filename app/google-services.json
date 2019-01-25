@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "167794661027",
+    "firebase_url": "https://bluecompass-cbf9c.firebaseio.com",
+    "project_id": "bluecompass-cbf9c",
+    "storage_bucket": "bluecompass-cbf9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167794661027:android:af5f70bb55a75441",
+        "android_client_info": {
+          "package_name": "com.example.a21736256.bluecompass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167794661027-m9tferg5arsqskp3u13mv4mtgrr5ieed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqNy4MDa9-3VXrtlW_Kda0vljiIqsEvfA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
