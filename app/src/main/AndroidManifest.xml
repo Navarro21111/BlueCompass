@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".LogIn" />
-        <activity android:name=".Registro"></activity>
+        <activity android:name=".Registro" />
+        <activity android:name=".BuscarGrupo" />
+        <activity android:name=".MisGrupos" />
+        <activity android:name=".CrearGrupo"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Violeta1"
+    tools:context=".CrearGrupo">
+
+    <TextView
+        android:id="@+id/tvSelecPlaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp"
+        android:text="@string/txtSelecPlaya"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/tvSeleccHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="260dp"
+        android:text="@string/txtSelecHora"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="95dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp" />
+
+    <EditText
+        android:id="@+id/etHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="160dp"
+        android:ems="10"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-316dp"
+        android:layout_marginBottom="107dp"
+        android:layout_toStartOf="@+id/etHora"
+        android:text="@string/txtNombre"
+        android:textSize="18sp"
+        android:layout_marginRight="-316dp"
+        android:layout_toLeftOf="@+id/etHora"
+        tools:ignore="RtlCompat" />
+
+    <EditText
+        android:id="@+id/etNombreGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNombre"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="-107dp"
+        android:ems="10"
+        android:hint="@string/txtNombreGrupo"
+        android:inputType="textPersonName"
+        android:layout_alignParentLeft="true"
+        tools:ignore="RtlCompat" />
+
+</RelativeLayout>

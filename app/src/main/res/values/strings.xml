@@ -7,4 +7,13 @@
     <string name="et_usuario">Introduce tu usuario</string>
     <string name="et_contraseña">Introduce tu contraseña</string>
     <string name="btn_inciar_sesion">Iniciar Sesion</string>
+    <string name="txtEscribirPlaya">Escribir Playa</string>
+    <string name="txtProvincia">Provincia</string>
+    <string name="txt_PlayasProvincia">Playas de la provincia</string>
+    <string name="btnBuscarPlaya">Buscar Playa</string>
+    <string name="txtMisGrupos">Mis Grupos</string>
+    <string name="txtSelecPlaya">Selecione la playa</string>
+    <string name="txtSelecHora">Seleccione la hora</string>
+    <string name="txtNombre">Nombre</string>
+    <string name="txtNombreGrupo">Nombre del grupo</string>
 </resources>
