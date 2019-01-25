@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-        <item android:drawable="@android:color/holo_orange_dark"
+        <item android:drawable="@color/Violeta2"
             android:state_pressed="true" />
-        <item android:drawable="@color/focused_purple_button"
-            android:state_focused="true" />
-        <item android:drawable="@color/light_purple_button" />
+        <item android:drawable="@color/Violeta4" />
 
 </selector>

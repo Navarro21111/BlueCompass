@@ -17,7 +17,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
-        android:background="@color/Violeta4"
+        android:background="@drawable/animacion_cambio_color_boton"
         android:text="@string/btn_inciar_sesion"
         android:textColor="@color/Violeta1"
         android:textSize="24sp" />
@@ -26,7 +26,6 @@
         android:id="@+id/etUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="150dp"
         android:ems="10"
@@ -54,9 +53,7 @@
         android:id="@+id/imageView3"
         android:layout_width="49dp"
         android:layout_height="56dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
         android:layout_marginTop="6dp"
         app:srcCompat="@drawable/flecha" />
 
