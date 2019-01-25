@@ -6,4 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".Registro">
 
+    <Button
+        android:id="@+id/btnLogIn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/animacion_cambio_color_boton"
+        android:text="@string/btn_registro"
+        android:textColor="@color/Violeta1"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:hint="@string/et_usuario"
+        android:inputType="textPersonName"
+        android:textColor="@color/Violeta5"
+        android:textColorHint="@color/Violeta5" />
+
+    <EditText
+        android:id="@+id/etUsuario2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="198dp"
+        android:ems="10"
+        android:hint="@string/et_correo"
+        android:inputType="textPersonName"
+        android:textColor="@color/Violeta5"
+        android:textColorHint="@color/Violeta5" />
+
+    <EditText
+        android:id="@+id/etUsuario3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="430dp"
+        android:ems="10"
+        android:hint="@string/et_fecha_nacimiento"
+        android:inputType="textPersonName"
+        android:textColor="@color/Violeta5"
+        android:textColorHint="@color/Violeta5" />
+
+    <EditText
+        android:id="@+id/etContraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="270dp"
+        android:ems="10"
+        android:hint="@string/et_contraseña"
+        android:inputType="textPassword"
+        android:textColorHint="@color/Violeta5" />
+
+    <EditText
+        android:id="@+id/etContraseña2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="349dp"
+        android:ems="10"
+        android:hint="@string/et_contraseña"
+        android:inputType="textPassword"
+        android:textColorHint="@color/Violeta5" />
+
 </RelativeLayout>

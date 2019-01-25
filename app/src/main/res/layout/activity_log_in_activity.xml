@@ -49,12 +49,4 @@
         android:inputType="textPassword"
         android:textColor="@color/Violeta5" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="49dp"
-        android:layout_height="56dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="6dp"
-        app:srcCompat="@drawable/flecha" />
-
 </RelativeLayout>
