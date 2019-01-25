@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlUsuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Violeta1"
+    android:padding="16sp"
+    tools:context=".Usuario">
+
+    <!--TODO  redondear ImageView-->
+
+    <ImageView
+        android:id="@+id/ivPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        tools:srcCompat="@tools:sample/avatars[12]" />
+
+    <TextView
+        android:id="@+id/tvNombreCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="185dp"
+        android:text="@string/tv_tu_nombre" />
+
+    <TextView
+        android:id="@+id/tvCorreoCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvNombreCuenta"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="220dp"
+        android:text="@string/tv_correo_cuenta"
+        android:layout_alignLeft="@+id/tvNombreCuenta"
+        android:layout_marginLeft="0dp" />
+
+    <Button
+        android:id="@+id/btnCambiarContrasenia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="163dp"
+        android:text="@string/btn_cambiar_contrasenia" />
+
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnCambiarContrasenia"
+        android:layout_marginTop="78dp"
+        android:text="@string/btn_cerrar_sesion" />
+
+</RelativeLayout>

@@ -7,4 +7,8 @@
     <string name="et_usuario">Introduce tu usuario</string>
     <string name="et_contraseña">Introduce tu contraseña</string>
     <string name="btn_inciar_sesion">Iniciar Sesion</string>
+    <string name="tv_tu_nombre">Usuario: %1$s</string>
+    <string name="tv_correo_cuenta">Correo: %1$s </string>
+    <string name="btn_cambiar_contrasenia">CAMBIAR CONTRASEÑA</string>
+    <string name="btn_cerrar_sesion"> CERRAR SESIÓN</string>
 </resources>
