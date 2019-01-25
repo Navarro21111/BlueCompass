@@ -29,7 +29,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="64dp"
-        android:background="@color/Violeta4"
+        android:background="@drawable/animacion_cambio_color_boton"
         android:onClick="logIn"
         android:text="@string/log_in"
         android:textColor="@color/Violeta1"
@@ -45,7 +45,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
-        android:background="@color/Violeta4"
+        android:background="@drawable/animacion_cambio_color_boton"
         android:text="@string/btn_registro"
         android:textColor="@color/Violeta1"
         android:textSize="24sp" />
