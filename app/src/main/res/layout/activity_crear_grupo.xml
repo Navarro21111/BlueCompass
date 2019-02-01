@@ -33,9 +33,9 @@
         android:textSize="18sp" />
 
     <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="164dp"
+        android:id="@+id/mapaGrupo"
+        android:layout_width="374dp"
+        android:layout_height="120dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -44,7 +44,7 @@
         android:layout_marginTop="95dp" />
 
     <EditText
-        android:id="@+id/etHora"
+        android:id="@+id/etFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -52,7 +52,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="177dp"
         android:ems="10"
         android:inputType="time" />
 
@@ -64,8 +64,8 @@
         android:layout_marginEnd="-316dp"
         android:layout_marginRight="-316dp"
         android:layout_marginBottom="107dp"
-        android:layout_toStartOf="@+id/etHora"
-        android:layout_toLeftOf="@+id/etHora"
+        android:layout_toStartOf="@+id/etFecha"
+        android:layout_toLeftOf="@+id/etFecha"
         android:text="@string/txtNombre"
         android:textSize="18sp" />
 
@@ -93,5 +93,33 @@
         app:srcCompat="@drawable/flecha"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp" />
+
+    <EditText
+        android:id="@+id/etmapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvSeleccHora"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-260dp"
+        android:ems="10"
+        android:hint="Proximamente en vuestras aplicaciones el mapa"
+        android:inputType="textPersonName"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/Violeta4"
+        android:onClick="insertarEvento"
+        android:text="@string/txtCrearGrupo"
+        android:textColor="@color/Violeta1"
+        android:textSize="24sp" />
 
 </RelativeLayout>

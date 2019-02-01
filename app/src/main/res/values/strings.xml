@@ -16,4 +16,5 @@
     <string name="txtSelecHora">Seleccione la hora</string>
     <string name="txtNombre">Nombre</string>
     <string name="txtNombreEvento">Nombre del Evento</string>
+    <string name="txtCrearGrupo">Crear Evento</string>
 </resources>
