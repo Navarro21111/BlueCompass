@@ -20,6 +20,7 @@
         android:layout_marginLeft="0dp" />
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMisEventos"
         android:layout_width="361dp"
         android:layout_height="283dp"
         android:layout_alignParentStart="true"
