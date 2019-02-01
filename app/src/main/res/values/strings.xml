@@ -8,4 +8,7 @@
     <string name="btn_inciar_sesion">Iniciar Sesion</string>
     <string name="et_correo">Introduce tu Correo</string>
     <string name="et_fecha_nacimiento">dd/mm/aaaa</string>
+    <string name="BlueCompass" />
+    <string name="tv_nombre_app">BlueCompass</string>
+    <string name="tv_slogan">Get to a cleaner world</string>
 </resources>
