@@ -1,20 +1,24 @@
 package com.example.a21736256.bluecompass;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.a21736256.bluecompass.javabeans.evento;
-import com.google.android.gms.maps.MapView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class CrearGrupo extends AppCompatActivity {
-    MapView mv;
+
     EditText etFecha;
     EditText etNombre;
     EditText etMapa;
+    TextView tvJfoo;
+
+
     private DatabaseReference dbR;
 
 
@@ -23,10 +27,14 @@ public class CrearGrupo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_grupo);
 
-        mv = findViewById(R.id.mapaGrupo);
-        etFecha=findViewById(R.id.etFecha);
+
+
+        etFecha=findViewById(R.id.etFechaGrupo);
         etNombre=findViewById(R.id.etNombreGrupo);
         etMapa=findViewById(R.id.etmapa);
+        tvJfoo=findViewById(R.id.tvNombreGrupo);
+
+
         dbR = FirebaseDatabase.getInstance().getReference().child("mensaje");
 
 

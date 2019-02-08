@@ -32,19 +32,8 @@
         android:text="@string/txtSelecHora"
         android:textSize="18sp" />
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapaGrupo"
-        android:layout_width="374dp"
-        android:layout_height="120dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="95dp" />
-
     <EditText
-        android:id="@+id/etFecha"
+        android:id="@+id/etFechaGrupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -57,15 +46,15 @@
         android:inputType="time" />
 
     <TextView
-        android:id="@+id/tvNombre"
+        android:id="@+id/tvNombreGrupo"
         android:layout_width="match_parent"
         android:layout_height="33dp"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="-316dp"
         android:layout_marginRight="-316dp"
         android:layout_marginBottom="107dp"
-        android:layout_toStartOf="@+id/etFecha"
-        android:layout_toLeftOf="@+id/etFecha"
+        android:layout_toStartOf="@+id/etFechaGrupo"
+        android:layout_toLeftOf="@+id/etFechaGrupo"
         android:text="@string/txtNombre"
         android:textSize="18sp" />
 
@@ -73,7 +62,7 @@
         android:id="@+id/etNombreGrupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvNombre"
+        android:layout_below="@+id/tvNombreGrupo"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="-107dp"

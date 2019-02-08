@@ -2,7 +2,6 @@
     <string name="app_name">BlueCompass</string>
     <string name="btnLogIn">btn_log_in</string>
     <string name="log_in">Log in</string>
-    <string name="Registrate">btn_registro</string>
     <string name="btn_registro">Registrate</string>
     <string name="et_usuario">Introduce tu usuario</string>
     <string name="et_contraseña">Introduce tu contraseña</string>
@@ -17,4 +16,10 @@
     <string name="txtNombre">Nombre</string>
     <string name="txtNombreEvento">Nombre del Evento</string>
     <string name="txtCrearGrupo">Crear Evento</string>
+    <string name="et_correo">Introduce tu Correo</string>
+    <string name="et_fecha_nacimiento">dd/mm/aaaa</string>
+    <string name="BlueCompass" />
+    <string name="tv_nombre_app">BlueCompass</string>
+    <string name="tv_slogan">Get to a cleaner world</string>
+
 </resources>

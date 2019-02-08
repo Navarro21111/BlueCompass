@@ -17,10 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".LogIn" />
+        <activity android:name=".CrearGrupo"/>
+        <activity android:name=".BuscarGrupo"/>
+        <activity android:name=".MisGrupos"/>
         <activity android:name=".Registro" />
-        <activity android:name=".BuscarGrupo" />
-        <activity android:name=".MisGrupos" />
-        <activity android:name=".CrearGrupo"></activity>
+        <activity android:name=".Menu"/>
     </application>
 
 </manifest>
