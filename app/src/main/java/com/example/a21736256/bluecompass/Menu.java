@@ -21,7 +21,8 @@ import java.util.ArrayList;
 public class Menu extends AppCompatActivity {
     String remitente;
 
-    private RecyclerView reyclerViewMenu;
+
+    private RecyclerView rvMenu;
     private AdaptadorMenu adaptadorMenu;
     private LinearLayoutManager llm;
     private ArrayList<PlayaItem> datos;
@@ -34,13 +35,15 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         remitente="Juan Inutil";
 
+
+        rvMenu=findViewById(R.id.rvMenu);
         datos=new ArrayList<PlayaItem>();
         adaptadorMenu= new AdaptadorMenu(datos);
         llm=new LinearLayoutManager(this);
 
-        reyclerViewMenu.setLayoutManager(llm);
-        reyclerViewMenu.setAdapter(adaptadorMenu);
-        reyclerViewMenu.setItemAnimator(new DefaultItemAnimator());
+        rvMenu.setLayoutManager(llm);
+        rvMenu.setAdapter(adaptadorMenu);
+        rvMenu.setItemAnimator(new DefaultItemAnimator());
 
         dbr=FirebaseDatabase.getInstance().getReference().child("Playas");
 
