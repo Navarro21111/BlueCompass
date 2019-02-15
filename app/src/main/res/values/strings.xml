@@ -11,4 +11,7 @@
     <string name="BlueCompass" />
     <string name="tv_nombre_app">BlueCompass</string>
     <string name="tv_slogan">Get to a cleaner world</string>
+    <string name="tv_nombre_splash">BlueCompass</string>
+    <string name="et_aniadir_nombre_playa">Nombre</string>
+    <string name="btn_aniadir_playa">Añadir Playa</string>
 </resources>

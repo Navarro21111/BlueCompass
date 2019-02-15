@@ -1,5 +1,6 @@
 package com.example.a21736256.bluecompass;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.a21736256.bluecompass.javabean.AdaptadorMenu;
 import com.example.a21736256.bluecompass.javabean.PlayaItem;
@@ -21,6 +24,7 @@ import java.util.ArrayList;
 public class Menu extends AppCompatActivity {
     String remitente;
 
+    private Button btnRegistarPlaya;
 
     private RecyclerView rvMenu;
     private AdaptadorMenu adaptadorMenu;
@@ -36,6 +40,7 @@ public class Menu extends AppCompatActivity {
         remitente="Juan Inutil";
 
 
+        btnRegistarPlaya=findViewById(R.id.btnAnaidirPlaya);
         rvMenu=findViewById(R.id.rvMenu);
         datos=new ArrayList<PlayaItem>();
         adaptadorMenu= new AdaptadorMenu(datos);
@@ -93,5 +98,11 @@ public class Menu extends AppCompatActivity {
 
             dbr.addChildEventListener(cel);
         }
+    }
+
+
+    public void registrarPlaya(View view){
+        Intent i = new Intent(this, AniadirPlaya.class);
+        startActivity(i);
     }
 }

@@ -3,6 +3,7 @@ package com.example.a21736256.bluecompass.javabean;
 import android.media.Image;
 
 public class PlayaItem {
+    private int id;
     private String nombre;
     private String provincia;
     private String descripcion;
@@ -45,5 +46,13 @@ public class PlayaItem {
 
     public void setImagen(Image imagen) {
         this.imagen = imagen;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

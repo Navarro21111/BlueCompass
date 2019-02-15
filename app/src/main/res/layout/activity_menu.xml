@@ -18,6 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <Button
+            android:id="@+id/btnAnaidirPlaya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/animacion_cambio_color_boton"
+            android:onClick="registrarPlaya"
+            android:text="@string/btn_aniadir_playa" />
+
     </LinearLayout>
 
 </RelativeLayout>

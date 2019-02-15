@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
-    Button tbn;
+    Button btnRegistroPlaya;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,4 +21,6 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, Registro.class);
         startActivity(i);
     }
+
+
 }

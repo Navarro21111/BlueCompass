@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".splash">
+    tools:context=".Splash">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:background="@color/Violeta1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
@@ -20,10 +21,20 @@
             app:srcCompat="@drawable/ultimo_icono" />
 
         <TextView
+            android:id="@+id/tvNombreApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tv_nombre_splash"
+            android:textSize="30sp" />
+
+        <TextView
             android:id="@+id/tvSlogan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="TextView" />
+            android:text="@string/tv_slogan"
+            android:textSize="30sp" />
+
     </LinearLayout>
 </RelativeLayout>
