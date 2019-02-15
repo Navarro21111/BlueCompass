@@ -14,4 +14,7 @@
     <string name="tv_nombre_splash">BlueCompass</string>
     <string name="et_aniadir_nombre_playa">Nombre</string>
     <string name="btn_aniadir_playa">Añadir Playa</string>
+    <string name="btn_seleccionar_foto">Sleccione su foto</string>
+    <string name="btn_subir_playa">Crear Playa</string>
+    <string name="et_provincia_aniadir">Provincia</string>
 </resources>
