@@ -7,9 +7,9 @@ public class PlayaItem {
     private String nombre;
     private String provincia;
     private String descripcion;
-    private Image imagen;
+    private String imagen;
 
-    public PlayaItem(String nombre, String provincia, String descripcion, Image imagen) {
+    public PlayaItem(String nombre, String provincia, String descripcion, String imagen) {
         this.nombre = nombre;
         this.provincia = provincia;
         this.descripcion = descripcion;
@@ -40,11 +40,11 @@ public class PlayaItem {
         this.descripcion = descripcion;
     }
 
-    public Image getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(Image imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 

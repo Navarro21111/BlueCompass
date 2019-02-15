@@ -86,7 +86,10 @@ public class AniadirPlaya extends AppCompatActivity {
                             progressBar.setProgress(0);
                         }
                     }, 5000);
-                    PlayaItem playa= new PlayaItem(etNombrePlaya)
+                    PlayaItem playa= new PlayaItem(etNombrePlaya.getText().toString().trim(), etProvincia.getText().toString(),
+                            etdescripcion.getText().toString(), taskSnapshot.getUploadSessionUri().toString());
+                    String idSubida= databaseReference.push().getKey();
+                    databaseReference.child(idSubida).setValue(playa);
                 }
             })
             .addOnFailureListener(new OnFailureListener() {
