@@ -15,21 +15,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.Date;
 
 public class Registro extends AppCompatActivity {
-    EditText etUsuario;
-    EditText etCorreo;
-    EditText etContrasena;
-    EditText etRepeticion;
-    EditText etNacimiento;
+    private EditText etUsuario;
+    private EditText etCorreo;
+    private EditText etContrasena;
+    private EditText etRepeticion;
+    private EditText etNacimiento;
 
-    Usuario usuario;
+    private Usuario usuario;
 
-    String nombreUsuario;
-    String Correo;
-    String Contrasenna;
-    String Repetir;
-    String nacimiento;
+    private String nombreUsuario;
+    private  String Correo;
+    private  String Contrasenna;
+    private  String Repetir;
+    private  String nacimiento;
     private DatabaseReference dbR;
-    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
