@@ -83,18 +83,6 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="0dp" />
 
-    <EditText
-        android:id="@+id/etmapa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tvSeleccHora"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="-260dp"
-        android:ems="10"
-        android:hint="Proximamente en vuestras aplicaciones el mapa"
-        android:inputType="textPersonName"
-        android:layout_alignParentLeft="true" />
-
     <Button
         android:id="@+id/btnRegistro"
         android:layout_width="match_parent"
@@ -105,7 +93,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
-        android:background="@color/Violeta4"
+        android:background="@drawable/animacion_cambio_color_boton"
         android:onClick="insertarEvento"
         android:text="@string/txtCrearGrupo"
         android:textColor="@color/Violeta1"

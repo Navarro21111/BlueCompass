@@ -21,5 +21,7 @@
     <string name="BlueCompass" />
     <string name="tv_nombre_app">BlueCompass</string>
     <string name="tv_slogan">Get to a cleaner world</string>
+    <string name="DistCont">Las contraseñas no coinciden</string>
+    <string name="CampoVacio">Uno de los campos esta vacio</string>
 
 </resources>

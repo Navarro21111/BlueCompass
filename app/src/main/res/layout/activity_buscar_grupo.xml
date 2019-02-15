@@ -65,14 +65,14 @@
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
-        android:background="@color/Violeta4"
+        android:background="@drawable/animacion_cambio_color_boton"
         android:text="@string/btnBuscarPlaya"
-        android:textColor="@color/Violeta1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp" />
+        android:textColor="@color/Violeta1" />
 
     <ImageView
         android:id="@+id/ImagenFlecja"

@@ -31,7 +31,6 @@ public class CrearGrupo extends AppCompatActivity {
 
         etFecha=findViewById(R.id.etFechaGrupo);
         etNombre=findViewById(R.id.etNombreGrupo);
-        etMapa=findViewById(R.id.etmapa);
         tvJfoo=findViewById(R.id.tvNombreGrupo);
 
 
