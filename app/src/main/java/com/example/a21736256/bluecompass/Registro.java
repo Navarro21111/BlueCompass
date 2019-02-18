@@ -1,18 +1,20 @@
 package com.example.a21736256.bluecompass;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.a21736256.bluecompass.javabean.Usuario;
-import com.google.firebase.database.DatabaseReference;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.Date;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Registro extends AppCompatActivity {
     private EditText etUsuario;
@@ -24,12 +26,12 @@ public class Registro extends AppCompatActivity {
     private Usuario usuario;
 
     private String nombreUsuario;
-    private  String Correo;
-    private  String Contrasenna;
-    private  String Repetir;
+    private  String correo;
+    private  String contrasenna;
+    private  String repetir;
     private  String nacimiento;
-    private DatabaseReference dbR;
-
+    private FirebaseAuth fba;
+    private FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,7 @@ public class Registro extends AppCompatActivity {
         etRepeticion = findViewById(R.id.etRepetir);
         etNacimiento =findViewById(R.id.etNac);
 
-        dbR = FirebaseDatabase.getInstance().getReference().child("Usuarios");
+        fba = FirebaseAuth.getInstance();
 
 
     }
@@ -58,34 +60,53 @@ public class Registro extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
 
     }*/
-    public void irMenu(View view){
-            boolean comprobar=enviar();
-            if(comprobar==true){
-                Intent i = new Intent(this, CrearGrupo.class);
-                startActivity(i);
-            }
 
 
+    private String validarDatos() {
+        String msj = null;
 
-        }
-
-
-
-    public boolean enviar(){
-        boolean comprobar = false;
         nombreUsuario =etUsuario.getText().toString();
-        Correo=etCorreo.getText().toString();
-        Contrasenna=etContrasena.getText().toString();
-        Repetir=etRepeticion.getText().toString();
+        correo =etCorreo.getText().toString();
+        contrasenna =etContrasena.getText().toString();
+        repetir =etRepeticion.getText().toString();
         nacimiento=etNacimiento.getText().toString();
 
-        usuario = new Usuario(nombreUsuario,Correo,Contrasenna,nacimiento);
+        if(!contrasenna.equals(repetir)){
+            //Toast.makeText(getBaseContext(),R.string.DistCont,Toast.LENGTH_LONG).show();
+            msj=getString(R.string.DistCont);
 
-        if(!Contrasenna.equals(Repetir)){
+        }
+        else if(contrasenna.equals("")||nacimiento.equals("")|| correo.equals("")||nombreUsuario.equals("")){
+            msj=getString(R.string.CampoVacio);
+
+            //Toast.makeText(getBaseContext(),R.string.CampoVacio,Toast.LENGTH_LONG).show();
+        }
+        else if (contrasenna.length() < 6) {
+            msj=getString(R.string.contrDigit);
+
+            //Toast.makeText(getBaseContext(),R.string.contrDigit,Toast.LENGTH_LONG).show();
+        }
+        return msj;
+    }
+
+    public void enviar(View v){
+        /**boolean comprobar = false;
+        nombreUsuario =etUsuario.getText().toString();
+        correo=etCorreo.getText().toString();
+        contrasenna=etContrasena.getText().toString();
+        repetir=etRepeticion.getText().toString();
+        nacimiento=etNacimiento.getText().toString();
+
+        usuario = new Usuario(nombreUsuario,correo,contrasenna,nacimiento);
+
+        if(!contrasenna.equals(repetir)){
             Toast.makeText(getBaseContext(),R.string.DistCont,Toast.LENGTH_LONG).show();
         }
-        else if(Contrasenna.equals("")||nacimiento.equals("")||Correo.equals("")||nombreUsuario.equals("")){
+        else if(contrasenna.equals("")||nacimiento.equals("")||correo.equals("")||nombreUsuario.equals("")){
             Toast.makeText(getBaseContext(),R.string.CampoVacio,Toast.LENGTH_LONG).show();
+        }
+        else if (contrasenna.length() < 6) {
+            Toast.makeText(getBaseContext(),R.string.contrDigit,Toast.LENGTH_LONG).show();
         }
 
         else{
@@ -96,5 +117,38 @@ public class Registro extends AppCompatActivity {
     }
         return comprobar;
 
+         */
 
-    }}
+        String warning = validarDatos();
+        if (warning == null) {
+        fba.createUserWithEmailAndPassword(correo, contrasenna)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+
+                            Usuario usuario = new Usuario(nombreUsuario, correo,nacimiento);
+                            FirebaseDatabase.getInstance().getReference("Usuarios")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).
+                                    setValue(usuario);
+
+
+                            Intent i = new Intent(Registro.this, CrearGrupo.class);
+                            startActivity(i);
+
+
+                        } else {
+                            Toast.makeText(Registro.this, getString(R.string.msj_no_registrado),                                        Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+    } else {
+        //Toast.makeText(this, getString(R.string.msj_no_data), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, warning,
+                Toast.LENGTH_LONG).show();
+    }
+}
+
+    }
+

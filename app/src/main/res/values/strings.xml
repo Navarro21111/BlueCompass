@@ -22,6 +22,9 @@
     <string name="tv_nombre_app">BlueCompass</string>
     <string name="tv_slogan">Get to a cleaner world</string>
     <string name="DistCont">Las contraseñas no coinciden</string>
-    <string name="CampoVacio">Uno de los campos esta vacio</string>
+    <string name="CampoVacio">Uno de los campos esta vacío</string>
+    <string name="contrDigit">La contraseña ha de ser de 6 dígitos</string>
+    <string name="msj_registrado">Usuario registrado</string>
+    <string name="msj_no_registrado">Ha habido un error inesperado</string>
 
 </resources>

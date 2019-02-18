@@ -4,6 +4,12 @@ public class Usuario {
     public Usuario() {
     }
 
+    public Usuario(String nombre, String correo, String nacimiento) {
+        this.nombre = nombre;
+        this.correo = correo;
+        this.nacimiento = nacimiento;
+    }
+
     private String nombre;
     private String correo;
     private String contraseña;
