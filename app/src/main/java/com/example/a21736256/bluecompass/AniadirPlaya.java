@@ -27,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
 public class AniadirPlaya extends AppCompatActivity {
@@ -46,6 +47,7 @@ public class AniadirPlaya extends AppCompatActivity {
     //Storage
     private StorageReference storageRef;
     private DatabaseReference databaseReference;
+    private StorageTask uploadTask;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,11 +74,19 @@ public class AniadirPlaya extends AppCompatActivity {
     }
 
     public void subirPlaya(View view){
+        if(uploadTask!=null && uploadTask.isInProgress()){
+            Toast.makeText(AniadirPlaya.this, "No seas capullo y espera", Toast.LENGTH_LONG).show();
+        }else{
+            metodoSubirObjeto();
+        }
+    }
+
+    private void metodoSubirObjeto() {
         if(imgUri!=null){
             StorageReference fileReference= storageRef.child(System.currentTimeMillis() + "." + getFileExtension(imgUri));
 
             //Para el progress bar
-            fileReference.putFile(imgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            uploadTask=fileReference.putFile(imgUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Handler handler= new Handler();
@@ -85,7 +95,7 @@ public class AniadirPlaya extends AppCompatActivity {
                         public void run() {
                             progressBar.setProgress(0);
                         }
-                    }, 5000);
+                    }, 500);
                     PlayaItem playa= new PlayaItem(etNombrePlaya.getText().toString().trim(), etProvincia.getText().toString(),
                             etdescripcion.getText().toString(), taskSnapshot.getUploadSessionUri().toString());
                     String idSubida= databaseReference.push().getKey();

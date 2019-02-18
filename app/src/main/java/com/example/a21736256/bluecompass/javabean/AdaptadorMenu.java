@@ -1,5 +1,6 @@
 package com.example.a21736256.bluecompass.javabean;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,10 +13,15 @@ import android.widget.TextView;
 import com.example.a21736256.bluecompass.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.MiViewHolder> implements View.OnClickListener {
 
     private ArrayList<PlayaItem> listaPlaya;
+    private Context context;
+
+
+
 
     public AdaptadorMenu(ArrayList<PlayaItem> listaPlaya) {
         this.listaPlaya = listaPlaya;
@@ -45,14 +51,17 @@ public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.MiViewHold
 
 
     public class MiViewHolder extends RecyclerView.ViewHolder{
-        TextView tvNombrePlaya;
-        TextView tvProvincia;
+        public TextView tvNombrePlaya;
+        public TextView tvProvincia;
+        public ImageView imgPlaya;
+
 
 
         public MiViewHolder(@NonNull View itemView){
             super(itemView);
             tvNombrePlaya=itemView.findViewById(R.id.tvNombreMenu);
             tvProvincia=itemView.findViewById(R.id.tvProvincia);
+            imgPlaya=itemView.findViewById(R.id.imgPlaya);
 
         }
 

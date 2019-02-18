@@ -64,15 +64,16 @@ public class Menu extends AppCompatActivity {
                 public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                     System.out.println("Nueva Playa");
                     PlayaItem p = dataSnapshot.getValue(PlayaItem.class);
-                    int pos=0;
+                    /*int pos=0;
                     for (int i=0;i< datos.size();i++){
                         if(datos.get(i).getNombre().equals(p.getNombre())){
                             datos.set(i,p);
                             pos=i;
                         }
                     }
-
-                    adaptadorMenu.notifyItemChanged(pos);
+*/
+                    datos.add(p);
+                    adaptadorMenu.notifyItemInserted(datos.size()-1);
                 }
 
                 @Override
