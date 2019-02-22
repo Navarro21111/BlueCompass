@@ -27,5 +27,6 @@
             android:text="@string/btn_aniadir_playa" />
 
     </LinearLayout>
+    <include layout="@layout/toolbar"/>
 
 </RelativeLayout>

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.a21736256.bluecompass.javabean.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,6 +24,7 @@ public class LogIn extends AppCompatActivity {
     String nombre;
     String password;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,10 +36,10 @@ public class LogIn extends AppCompatActivity {
         etPassword = findViewById(R.id.contraseñaLogIn);
     }
 
-    public void irMenu(View view) {
+    /*public void irMenu(View view) {
         Intent i = new Intent(this, Menu.class);
         startActivity(i);
-    }
+    }*/
 
     private String validarDatos() {
         String msj = null;
@@ -56,8 +58,7 @@ public class LogIn extends AppCompatActivity {
 
 
 
-   /* public void acceder(View v) {
-        //if (validarDatos()) {
+    public void acceder(View v) {
         String warning = validarDatos();
         if (warning == null) {
             fba.signInWithEmailAndPassword(nombre, password)
@@ -67,23 +68,22 @@ public class LogIn extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 user = fba.getCurrentUser();
                                 Toast.makeText(LogIn.this,
-                                        "Usuario logado "+ user.getNombre(),
+                                        "Usuario logueado "+ nombre,
                                         Toast.LENGTH_SHORT).show();
-                                Intent i = new Intent(LogIn.this, MainActivity.class);
-                                i.putExtra("USER", user.getNombre());
+                                Intent i = new Intent(LogIn.this, Menu.class);
+                                i.putExtra("USER", nombre);
                                 startActivity(i);
                             } else {
                                 Toast.makeText(LogIn.this,
-                                        "No se puede accerder",
+                                        "No se puede accerder.",
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
 
         } else {
-            //Toast.makeText(this, getString(R.string.msj_no_data), Toast.LENGTH_LONG).show();
             Toast.makeText(this, warning,
                     Toast.LENGTH_LONG).show();
-        }*/
+       } }
 
 }

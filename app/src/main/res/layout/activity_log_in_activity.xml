@@ -18,7 +18,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
         android:background="@drawable/animacion_cambio_color_boton"
-        android:onClick="irMenu"
+        android:onClick="acceder"
         android:text="@string/btn_inciar_sesion"
         android:textColor="@color/Violeta1"
         android:textSize="24sp" />

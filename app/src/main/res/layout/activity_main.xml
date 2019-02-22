@@ -50,4 +50,5 @@
         android:text="@string/btn_registro"
         android:textColor="@color/Violeta1"
         android:textSize="24sp" />
+
 </RelativeLayout>
