@@ -16,6 +16,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 public class Registro extends AppCompatActivity {
     private EditText etUsuario;
     private EditText etCorreo;
@@ -26,10 +29,11 @@ public class Registro extends AppCompatActivity {
     private Usuario usuario;
 
     private String nombreUsuario;
-    private  String correo;
-    private  String contrasenna;
-    private  String repetir;
-    private  String nacimiento;
+    private String correo;
+    private String contrasenna;
+    private String repetir;
+    private String[] Compnacimiento;
+    private String nacimiento;
     private FirebaseAuth fba;
     private FirebaseUser user;
     @Override
@@ -65,17 +69,33 @@ public class Registro extends AppCompatActivity {
     private String validarDatos() {
         String msj = null;
 
-        nombreUsuario =etUsuario.getText().toString();
-        correo =etCorreo.getText().toString();
-        contrasenna =etContrasena.getText().toString();
-        repetir =etRepeticion.getText().toString();
-        nacimiento=etNacimiento.getText().toString();
+        nombreUsuario =etUsuario.getText().toString().trim();
+        correo =etCorreo.getText().toString().trim();
+        contrasenna =etContrasena.getText().toString().trim();
+        repetir =etRepeticion.getText().toString().trim();
+        //Compnacimiento=etNacimiento.toString().split("/");
+        nacimiento=etNacimiento.getText().toString().trim();
+        /*int dia=Integer.parseInt(Compnacimiento[0]);
+        int mes=Integer.parseInt(Compnacimiento[1]);
+        int año=Integer.parseInt(Compnacimiento[2]);
+        Calendar edad=new GregorianCalendar(año,mes,dia);
+        Calendar hoy=Calendar.getInstance();
+        int años=hoy.get(Calendar.YEAR)-edad.get(Calendar.YEAR);
+        edad.add(Calendar.YEAR,años);*/
+
+
 
         if(!contrasenna.equals(repetir)){
             //Toast.makeText(getBaseContext(),R.string.DistCont,Toast.LENGTH_LONG).show();
             msj=getString(R.string.DistCont);
 
         }
+      /*  else if(años>1){
+            msj="No es mayor de 18 años";
+        }
+*/
+
+
         else if(contrasenna.equals("")||nacimiento.equals("")|| correo.equals("")||nombreUsuario.equals("")){
             msj=getString(R.string.CampoVacio);
 

@@ -48,18 +48,6 @@
         android:textColorHint="@color/Violeta5" />
 
     <EditText
-        android:id="@+id/etNac"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="430dp"
-        android:ems="10"
-        android:hint="@string/et_fecha_nacimiento"
-        android:inputType="textPersonName"
-        android:textColor="@color/Violeta5"
-        android:textColorHint="@color/Violeta5" />
-
-    <EditText
         android:id="@+id/etContrasenna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -88,5 +76,17 @@
         android:hint="@string/et_contraseña"
         android:inputType="textPassword"
         android:textColorHint="@color/Violeta5" />
+
+    <EditText
+        android:id="@+id/etNac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="104dp"
+        android:ems="10"
+        android:hint="@string/et_fecha_nacimiento"
+        android:inputType="date"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

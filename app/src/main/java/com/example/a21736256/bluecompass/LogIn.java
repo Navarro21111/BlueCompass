@@ -17,7 +17,7 @@ public class LogIn extends AppCompatActivity {
 
     }
     public void irMenu(View view){
-        Intent i = new Intent(this, Menu.class);
+        Intent i = new Intent(this, CrearGrupo.class);
         startActivity(i);
     }
 }

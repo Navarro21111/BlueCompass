@@ -26,5 +26,6 @@
     <string name="contrDigit">La contraseña ha de ser de 6 dígitos</string>
     <string name="msj_registrado">Usuario registrado</string>
     <string name="msj_no_registrado">Ha habido un error inesperado</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
