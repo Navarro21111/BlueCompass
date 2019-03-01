@@ -78,15 +78,17 @@
         android:textColorHint="@color/Violeta5" />
 
     <EditText
-        android:id="@+id/etNac"
+        android:id="@+id/etAnnos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="104dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="93dp"
         android:ems="10"
-        android:hint="@string/et_fecha_nacimiento"
-        android:inputType="date"
-        android:layout_alignParentLeft="true" />
+        android:hint="@string/etAnnos"
+        android:inputType="number" />
 
 </RelativeLayout>

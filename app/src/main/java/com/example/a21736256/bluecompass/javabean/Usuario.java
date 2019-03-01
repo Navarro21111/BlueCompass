@@ -4,7 +4,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nombre, String correo, String nacimiento) {
+    public Usuario(String nombre, String correo, int nacimiento) {
         this.nombre = nombre;
         this.correo = correo;
         this.nacimiento = nacimiento;
@@ -13,9 +13,9 @@ public class Usuario {
     private String nombre;
     private String correo;
     private String contraseña;
-    private String nacimiento;
+    private int nacimiento;
 
-    public Usuario(String nombre, String correo, String contraseña, String nacimiento) {
+    public Usuario(String nombre, String correo, String contraseña, int nacimiento) {
         this.nombre = nombre;
         this.correo = correo;
         this.contraseña = contraseña;
@@ -46,11 +46,11 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public String getNacimiento() {
+    public int getNacimiento() {
         return nacimiento;
     }
 
-    public void setNacimiento(String nacimiento) {
+    public void setNacimiento(int nacimiento) {
         this.nacimiento = nacimiento;
     }
 }

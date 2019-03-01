@@ -33,7 +33,7 @@ public class Registro extends AppCompatActivity {
     private String contrasenna;
     private String repetir;
     private String[] Compnacimiento;
-    private String nacimiento;
+    private int nacimiento;
     private FirebaseAuth fba;
     private FirebaseUser user;
     @Override
@@ -44,7 +44,7 @@ public class Registro extends AppCompatActivity {
         etCorreo = findViewById(R.id.etCorreo);
         etContrasena= findViewById(R.id.etContrasenna);
         etRepeticion = findViewById(R.id.etRepetir);
-        etNacimiento =findViewById(R.id.etNac);
+        etNacimiento =findViewById(R.id.etAnnos);
 
         fba = FirebaseAuth.getInstance();
 
@@ -74,7 +74,7 @@ public class Registro extends AppCompatActivity {
         contrasenna =etContrasena.getText().toString().trim();
         repetir =etRepeticion.getText().toString().trim();
         //Compnacimiento=etNacimiento.toString().split("/");
-        nacimiento=etNacimiento.getText().toString().trim();
+        nacimiento=Integer.parseInt(etNacimiento.getText().toString().trim());
         /*int dia=Integer.parseInt(Compnacimiento[0]);
         int mes=Integer.parseInt(Compnacimiento[1]);
         int año=Integer.parseInt(Compnacimiento[2]);
@@ -96,7 +96,7 @@ public class Registro extends AppCompatActivity {
 */
 
 
-        else if(contrasenna.equals("")||nacimiento.equals("")|| correo.equals("")||nombreUsuario.equals("")){
+        else if(contrasenna.equals("")||nacimiento==0|| correo.equals("")||nombreUsuario.equals("")){
             msj=getString(R.string.CampoVacio);
 
             //Toast.makeText(getBaseContext(),R.string.CampoVacio,Toast.LENGTH_LONG).show();
@@ -106,6 +106,10 @@ public class Registro extends AppCompatActivity {
 
             //Toast.makeText(getBaseContext(),R.string.contrDigit,Toast.LENGTH_LONG).show();
         }
+        else if(nacimiento<18){
+            msj="Para entrar a esta aplicacion tienes que ser mayor de edad";
+        }
+
         return msj;
     }
 
@@ -153,7 +157,7 @@ public class Registro extends AppCompatActivity {
                                     setValue(usuario);
 
 
-                            Intent i = new Intent(Registro.this, CrearGrupo.class);
+                            Intent i = new Intent(Registro.this, Menu.class);
                             startActivity(i);
 
 

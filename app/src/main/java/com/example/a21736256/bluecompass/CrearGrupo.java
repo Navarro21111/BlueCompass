@@ -28,7 +28,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class CrearGrupo extends AppCompatActivity implements OnMapReadyCallback {
+public class CrearGrupo extends AppCompatActivity /**implements OnMapReadyCallback **/{
 
     EditText etFecha;
     EditText etNombre;
@@ -54,11 +54,12 @@ public class CrearGrupo extends AppCompatActivity implements OnMapReadyCallback 
         etNombre = findViewById(R.id.etNombreGrupo);
 
 
+
         dbR = FirebaseDatabase.getInstance().getReference().child("mensaje");
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        /**SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
+**/
         /* DEPRECADO
         gac = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this,
@@ -106,13 +107,13 @@ public class CrearGrupo extends AppCompatActivity implements OnMapReadyCallback 
 
     }
 
-    @Override
+    /** @Override
 
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         mMap.getUiSettings().setZoomControlsEnabled(true);
-
+**/
         /*LatLng ibiza = new LatLng(38.9, 1.4);
         mMap.addMarker(new MarkerOptions().position(ibiza).title("Ibiza"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(ibiza));
@@ -125,7 +126,7 @@ public class CrearGrupo extends AppCompatActivity implements OnMapReadyCallback 
         CameraUpdate cu = CameraUpdateFactory.newCameraPosition(camPos);
         mMap.animateCamera(cu);*/
 
-        if (localizacion != null) {
+       /** if (localizacion != null) {
             LatLng miLocalizacion = new LatLng(localizacion.getLatitude(),
                     localizacion.getLongitude());
             mMap.addMarker(new MarkerOptions().position(miLocalizacion).title("Mi localización"));
@@ -175,7 +176,7 @@ public class CrearGrupo extends AppCompatActivity implements OnMapReadyCallback 
             }
         }
     }
-
+**/
     /* DEPRECADO
     @Override
     public void onConnected(@Nullable Bundle bundle) {
