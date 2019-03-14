@@ -17,4 +17,6 @@
     <string name="btn_seleccionar_foto">Sleccione su foto</string>
     <string name="btn_subir_playa">Crear Playa</string>
     <string name="et_provincia_aniadir">Provincia</string>
+    <string name="et_introducir_playa">Introduce la playa que deseas consultar</string>
+    <string name="btn_consultar_p">Consultar Playa</string>
 </resources>

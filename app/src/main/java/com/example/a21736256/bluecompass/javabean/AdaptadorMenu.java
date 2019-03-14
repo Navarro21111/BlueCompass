@@ -10,64 +10,70 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.a21736256.bluecompass.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.MiViewHolder> implements View.OnClickListener {
-
-    private ArrayList<PlayaItem> listaPlaya;
-    private Context context;
+public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.PlayaViewHolder> implements View.OnClickListener {
 
 
+    private ArrayList<PlayaItem> listaPlayas;
+    private View.OnClickListener listener;
 
 
-    public AdaptadorMenu(ArrayList<PlayaItem> listaPlaya) {
-        this.listaPlaya = listaPlaya;
+    public AdaptadorMenu(ArrayList<PlayaItem> listaPlayas) {
+        this.listaPlayas = listaPlayas;
     }
+
     @NonNull
     @Override
-    public MiViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i){
-        View v=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.rv_playas, viewGroup, false);
-        MiViewHolder vh= new MiViewHolder(v);
+    public PlayaViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.rv_playas, viewGroup, false);
+        PlayaViewHolder vh = new PlayaViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MiViewHolder miViewHolder, int i) {
-        miViewHolder.bindPlaya(listaPlaya.get(i));
+    public void onBindViewHolder(@NonNull PlayaViewHolder playaViewHolder, int i) {
+        playaViewHolder.bindPlaya(listaPlayas.get(i));
+
     }
 
     @Override
     public int getItemCount() {
-        return listaPlaya.size();
+        return listaPlayas.size();
     }
 
     @Override
     public void onClick(View v) {
-
+        if (listener!=null){
+            listener.onClick(v);
+        }
     }
 
+    public class PlayaViewHolder extends RecyclerView.ViewHolder {
+        private TextView tvNombreItem;
+        private TextView tvZonaItem;
+        private ImageView ivPlayaItem;
 
-    public class MiViewHolder extends RecyclerView.ViewHolder{
-        public TextView tvNombrePlaya;
-        public TextView tvProvincia;
-        public ImageView imgPlaya;
-
-
-
-        public MiViewHolder(@NonNull View itemView){
-            super(itemView);
-            tvNombrePlaya=itemView.findViewById(R.id.tvNombreMenu);
-            tvProvincia=itemView.findViewById(R.id.tvProvincia);
-            imgPlaya=itemView.findViewById(R.id.imgPlaya);
-
+        public PlayaViewHolder(@NonNull View viewItem) {
+            super(viewItem);
+            tvNombreItem = viewItem.findViewById(R.id.tvNombreItem);
+            tvZonaItem = viewItem.findViewById(R.id.tvZonaItem);
+            ivPlayaItem = viewItem.findViewById(R.id.ivPlayaItem);
         }
 
-        public void bindPlaya(PlayaItem playa){
-            tvNombrePlaya.setText(playa.getNombre());
-            tvProvincia.setText(playa.getProvincia());
+        public void bindPlaya(PlayaItem p){
+            tvNombreItem.setText(p.getNombre());
+            tvZonaItem.setText(p.getZona());
+            Glide.with(ivPlayaItem.getContext()).applyDefaultRequestOptions(RequestOptions.fitCenterTransform()).load(p.getImagen()).into(ivPlayaItem);
         }
+    }
+
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener= listener;
     }
 }

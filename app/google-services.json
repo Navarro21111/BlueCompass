@@ -15,6 +15,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "167794661027-brj7nilasn2lo4deenu0t2st32clenek.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a21736256.bluecompass",
+            "certificate_hash": "3d5e4a532614e985c28511e084bdc94ab7d6da69"
+          }
+        },
+        {
+          "client_id": "167794661027-igq9gur389vns7mulhvjmbnuda5q59dr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a21736256.bluecompass",
+            "certificate_hash": "8e531aae76254856246e2d86fb1dbe2fa4b47e90"
+          }
+        },
+        {
+          "client_id": "167794661027-0utt3m3c0dtsnji40ilk8nb5nfd1pthp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a21736256.bluecompass",
+            "certificate_hash": "32fe6ebfb4be926ed526febc9c42f9b10b53b52c"
+          }
+        },
+        {
           "client_id": "167794661027-m9tferg5arsqskp3u13mv4mtgrr5ieed.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +53,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167794661027-m9tferg5arsqskp3u13mv4mtgrr5ieed.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

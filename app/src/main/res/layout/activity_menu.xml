@@ -7,25 +7,30 @@
     android:background="@color/Violeta1"
     tools:context=".Menu">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMenuPlaya"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:layout_height="442dp"
+        android:onClick="acceder" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/etConsultarPlaya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvMenuPlaya"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/et_introducir_playa"
+        android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnAnaidirPlaya"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/animacion_cambio_color_boton"
-            android:onClick="registrarPlaya"
-            android:text="@string/btn_aniadir_playa" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnConsultarM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="consultarPlaya"
+        android:text="@string/btn_consultar_p" />
 
 </RelativeLayout>

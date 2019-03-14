@@ -10,6 +10,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.a21736256.bluecompass.javabean.AdaptadorMenu;
 import com.example.a21736256.bluecompass.javabean.PlayaItem;
@@ -18,62 +20,71 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
 public class Menu extends AppCompatActivity {
-    String remitente;
 
-    private Button btnRegistarPlaya;
+    Button btnConsultarP;
+    EditText etConsultarP;
+    RecyclerView rvMenu;
+    AdaptadorMenu adaptador;
+    LinearLayoutManager llm;
+    ArrayList<PlayaItem> datos;
 
-    private RecyclerView rvMenu;
-    private AdaptadorMenu adaptadorMenu;
-    private LinearLayoutManager llm;
-    private ArrayList<PlayaItem> datos;
-
+    //database
     private DatabaseReference dbr;
     private ChildEventListener cel;
+    private FirebaseStorage firebaseStorage;
+    private StorageReference storageReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        remitente="Juan Inutil";
+
+        rvMenu = findViewById(R.id.rvMenuPlaya);
+        btnConsultarP = findViewById(R.id.btnConsultarM);
+        etConsultarP = findViewById(R.id.etConsultarPlaya);
+
+        dbr = FirebaseDatabase.getInstance().getReference().child("Playas");
+        addChildEventListener();
+
+        datos = new ArrayList<>();
+        adaptador = new AdaptadorMenu(datos);
+        llm = new LinearLayoutManager(this);
 
 
-        btnRegistarPlaya=findViewById(R.id.btnAnaidirPlaya);
-        rvMenu=findViewById(R.id.rvMenu);
-        datos=new ArrayList<PlayaItem>();
-        adaptadorMenu= new AdaptadorMenu(datos);
-        llm=new LinearLayoutManager(this);
+        adaptador.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         rvMenu.setLayoutManager(llm);
-        rvMenu.setAdapter(adaptadorMenu);
+        rvMenu.setAdapter(adaptador);
         rvMenu.setItemAnimator(new DefaultItemAnimator());
 
-        dbr=FirebaseDatabase.getInstance().getReference().child("Playas");
 
-        addChilEventListener();
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference().child("Playas");
 
 
     }
 
-    private void addChilEventListener(){
-        if (cel==null){
-            cel= new ChildEventListener() {
+
+    private void addChildEventListener() {
+        if (cel == null) {
+            cel = new ChildEventListener() {
                 @Override
                 public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                    System.out.println("Nueva Playa");
                     PlayaItem p = dataSnapshot.getValue(PlayaItem.class);
-                    /*int pos=0;
-                    for (int i=0;i< datos.size();i++){
-                        if(datos.get(i).getNombre().equals(p.getNombre())){
-                            datos.set(i,p);
-                            pos=i;
-                        }
-                    }
-*/
                     datos.add(p);
-                    adaptadorMenu.notifyItemInserted(datos.size()-1);
+                    adaptador.notifyItemChanged(datos.size() - 1);
                 }
 
                 @Override
@@ -95,15 +106,19 @@ public class Menu extends AppCompatActivity {
                 public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-            };
 
+            };
             dbr.addChildEventListener(cel);
         }
     }
 
-
-    public void registrarPlaya(View view){
-        Intent i = new Intent(this, AniadirPlaya.class);
+    public void consultarPlaya(View view) {
+        Intent i = new Intent(Menu.this, DetallePlaya.class);
+        PlayaItem playa= new PlayaItem(datos.get(1).getNombre(), datos.get(1).getZona(), datos.get(1).getDescripcion(),
+                datos.get(1).getImagen());
+        i.putExtra("PLAYA",playa );
         startActivity(i);
+
     }
+
 }

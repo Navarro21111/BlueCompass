@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imgPlaya"
-        android:layout_width="16dp"
-        android:layout_height="141dp"
+        android:id="@+id/ivPlayaItem"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
         android:layout_weight="1" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="141dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvNombreItem"
+        android:layout_width="229dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="0dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-        <TextView
-            android:id="@+id/tvNombreMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    <TextView
+        android:id="@+id/tvZonaItem"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNombreItem"
+        android:layout_toEndOf="@+id/ivPlayaItem"
+        android:text="TextView" />
 
-        <TextView
-            android:id="@+id/tvProvincia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
