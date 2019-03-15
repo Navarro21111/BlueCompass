@@ -12,9 +12,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="17dp"
         android:layout_weight="1" />
 
     <TextView
@@ -24,16 +24,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="155dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="50dp"
         android:text="TextView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    <TextView
-        android:id="@+id/tvZonaItem"
-        android:layout_width="283dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvNombreItem"
-        android:layout_toEndOf="@+id/ivPlayaItem"
-        android:text="TextView" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:fontFamily="@font/lato_black"
+        android:layout_marginLeft="155dp"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>

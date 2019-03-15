@@ -18,6 +18,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
         android:background="@drawable/animacion_cambio_color_boton"
+        android:onClick="enviar"
         android:text="@string/btn_registro"
         android:textColor="@color/Violeta1"
         android:textSize="24sp" />
@@ -30,11 +31,12 @@
         android:ems="10"
         android:hint="@string/et_usuario"
         android:inputType="textPersonName"
+        android:textAllCaps="false"
         android:textColor="@color/Violeta5"
         android:textColorHint="@color/Violeta5" />
 
     <EditText
-        android:id="@+id/etUsuario2"
+        android:id="@+id/etCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -46,19 +48,7 @@
         android:textColorHint="@color/Violeta5" />
 
     <EditText
-        android:id="@+id/etUsuario3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="430dp"
-        android:ems="10"
-        android:hint="@string/et_fecha_nacimiento"
-        android:inputType="textPersonName"
-        android:textColor="@color/Violeta5"
-        android:textColorHint="@color/Violeta5" />
-
-    <EditText
-        android:id="@+id/etContraseña"
+        android:id="@+id/etContrasenna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -73,7 +63,7 @@
         android:textColorHint="@color/Violeta5" />
 
     <EditText
-        android:id="@+id/etContraseña2"
+        android:id="@+id/etRepetir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -86,5 +76,19 @@
         android:hint="@string/et_contraseña"
         android:inputType="textPassword"
         android:textColorHint="@color/Violeta5" />
+
+    <EditText
+        android:id="@+id/etAnnos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="93dp"
+        android:ems="10"
+        android:hint="@string/etAnnos"
+        android:inputType="number" />
 
 </RelativeLayout>

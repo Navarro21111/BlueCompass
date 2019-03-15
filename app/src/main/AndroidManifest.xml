@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a21736256.bluecompass">
+    package="com.BlueCompass.a21736256.bluecompass">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".BlueCompass"
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ultimo_icono"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
+        <activity android:name=".MenuOpciones"></activity>
+        <activity android:name=".Perfil"></activity>
         <activity android:name=".LogIn" />
-        <activity android:name=".Registro" />
+        <activity android:name=".Registro"/>
+        <activity android:name=".CrearGrupo"></activity>
+        <activity android:name=".MisGrupos"></activity>
         <activity android:name=".Splash">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Menu" />
-        <activity android:name=".AniadirPlaya" />
-        <activity android:name=".DetallePlaya"></activity>
+        <activity android:name=".DetallePlaya" />
     </application>
 
 </manifest>

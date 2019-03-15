@@ -17,7 +17,7 @@
         android:layout_marginStart="142dp"
         android:layout_marginLeft="142dp"
         android:layout_marginTop="32dp"
-        app:srcCompat="@drawable/logo_sin_fondo" />
+        app:srcCompat="@drawable/ultimo_icono" />
 
     <Button
         android:id="@+id/btnLogIn"

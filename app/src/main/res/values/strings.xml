@@ -19,4 +19,63 @@
     <string name="et_provincia_aniadir">Provincia</string>
     <string name="et_introducir_playa">Introduce la playa que deseas consultar</string>
     <string name="btn_consultar_p">Consultar Playa</string>
+    <string name="btn_alerta_de">Alertas</string>
+    <string name="btn_avisar_medusas">Avisar de Medusas</string>
+    <string name="btn_avisar_marea">Avisar de Marea</string>
+
+
+
+    <string name="txtEscribirPlaya">Escribir Playa</string>
+
+    <string name="txtProvincia">Provincia</string>
+
+    <string name="txt_PlayasProvincia">Playas de la provincia</string>
+
+    <string name="btnBuscarPlaya">Buscar Playa</string>
+
+    <string name="txtMisEventos">Mis Eventos</string>
+
+    <string name="txtSelecPlaya">Selecione la playa</string>
+
+    <string name="txtSelecHora">Seleccione la hora</string>
+
+    <string name="txtNombre">Nombre</string>
+
+    <string name="txtNombreEvento">Nombre del Evento</string>
+
+    <string name="txtCrearGrupo">Crear Evento</string>
+
+
+    <string name="DistCont">Las contraseñas no coinciden</string>
+
+    <string name="CampoVacio">Uno de los campos esta vacío</string>
+
+    <string name="contrDigit">La contraseña ha de ser de 6 dígitos</string>
+
+    <string name="msj_registrado">Usuario registrado</string>
+
+    <string name="msj_no_registrado">Ha habido un error inesperado</string>
+
+    <string name="title_activity_maps">Map</string>
+
+    <string name="etAnnos">Introduce tu edad</string>
+
+
+    <string name="Registrate">btn_registro</string>
+
+
+    <string name="tv_tu_nombre">Usuario:</string>
+
+    <string name="tv_correo_cuenta">Correo:</string>
+
+    <string name="btn_cambiar_contrasenia">CAMBIAR CONTRASEÑA</string>
+
+    <string name="btn_cerrar_sesion"> CERRAR SESIÓN</string>
+
+    <string name="txtCambiarContrasenna">Cambiar contraseña</string>
+    <string name="perfil">Perfil</string>
+    <string name="crearGrupo">Crear evento</string>
+    <string name="buscarEvento">Buscar evento</string>
+    <string name="buscarPlaya">Buscar playa</string>
+
 </resources>

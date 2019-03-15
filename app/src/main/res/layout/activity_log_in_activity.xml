@@ -30,7 +30,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="150dp"
         android:ems="10"
-        android:hint="@string/et_usuario"
+        android:hint="Introduce tu correo"
         android:inputType="textPersonName"
         android:textColor="@color/Violeta5"
         android:textSize="18sp" />

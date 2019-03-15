@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/tv_nombre_splash"
-            android:textSize="30sp" />
+            android:textSize="36sp"
+            app:fontFamily="@font/wonoland_park" />
 
         <TextView
             android:id="@+id/tvSlogan"
@@ -34,7 +35,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/tv_slogan"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            app:fontFamily="@font/lato_black" />
 
     </LinearLayout>
 </RelativeLayout>
